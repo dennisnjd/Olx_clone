@@ -1,0 +1,61 @@
+.profileBar {
+    z-index: 10;
+    right: 32px;
+    top: 64px;
+    color: #002F34;
+    width: 288px;
+    position: fixed;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px 0px, rgba(0, 0, 0, 0.24) 0px 6px 6px 0px;
+    border-radius: 10px;
+}
+
+.nameArea {
+    margin: 16px;
+    padding: 20px 16px 20px 0;
+    width: 90%;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+.avatarPic {
+    width: 4em;
+    height: 4em;
+    margin-right: 24px;
+    
+}
+
+
+.editProfileButton {
+    font-weight: bold;
+    margin-left:.8em;
+    width: 90%;
+    padding: 16px px;
+    height: 40px;
+    color: white;
+    background-color: #002F34;
+    border-radius: 4px;
+    border: 5px solid #002F34;
+    margin-bottom: 1.2em;
+
+}
+.myAdds{
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    text-decoration: none;
+    color: black;
+    height: 48px;
+    font-size: 16px;
+}
+.myAdds:hover{
+    cursor: pointer;
+}
+span{
+    margin-left: 1em;
+    font-weight: 498;
+    color: #002F34;
+    font-size: 16px;
+}

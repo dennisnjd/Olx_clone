@@ -111,6 +111,11 @@
   margin: 0;
   background-color: black;
   height: 2px;
+  display: flex;
+}
+
+.loginPage i{
+  margin-left: .5em;
 }
 .loginPage{
   font-weight: 570;

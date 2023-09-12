@@ -7,22 +7,30 @@ import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { auth } from '../../firebase/config';
-import { listenToAuthChanges} from '../../firebase/AuthDetails';
+import { listenToAuthChanges } from '../../firebase/AuthDetails';
 import { Link } from 'react-router-dom';
+import ProfileDetails from '../ProfileDetails/ProfileDetails';
 
 
 
 function Header() {
 
   const [authUser, setAuthUser] = useState(null);
+  const [isLoaded , setisLoaded] = useState(false)
+
+  const toggleProfile = () =>{
+    setisLoaded(!isLoaded)
+  }
 
 
-  useEffect(() =>{  
+  useEffect(() => {
     const user = auth.currentUser;
 
-    listenToAuthChanges(auth, setAuthUser); // checking if user is logged in and storing name in authUser.
-    console.log(authUser);
-   },[])
+    const userrr = listenToAuthChanges(auth, setAuthUser); // checking if user is logged in and storing name in authUser.
+    console.log("hahahaha ahiahia ahab hbsabs ",userrr);
+  }, [])
+
+
 
   return (
     <div className="headerParentDiv">
@@ -53,12 +61,16 @@ function Header() {
 
         <div className="loginPage">
           {authUser ? (
-            <span>{ authUser}</span>
+            <span>{authUser}</span>
           ) : (
             <Link to='/login'>
-          <span>Login</span>
-          </Link>
-          )} 
+              <span>Login</span>
+            </Link>
+          )}
+          <i onClick={toggleProfile} class="fa-solid fa-chevron-down"></i>
+          {isLoaded && <ProfileDetails />}
+
+
           <hr className='line' />
         </div>
 
