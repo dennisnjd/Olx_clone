@@ -16,28 +16,27 @@ import ProfileDetails from '../ProfileDetails/ProfileDetails';
 function Header() {
 
   const [authUser, setAuthUser] = useState(null);
-  const [isLoaded , setisLoaded] = useState(false)
+  const [isLoaded, setisLoaded] = useState(false)
 
-  const toggleProfile = () =>{
+  const toggleProfile = () => {
     setisLoaded(!isLoaded)
   }
 
 
   useEffect(() => {
-    const user = auth.currentUser;
 
-    const userrr = listenToAuthChanges(auth, setAuthUser); // checking if user is logged in and storing name in authUser.
-    console.log("hahahaha ahiahia ahab hbsabs ",userrr);
+    listenToAuthChanges(auth, setAuthUser); // checking if user is logged in and storing name in authUser.
   }, [])
-
 
 
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
-        <div className="brandName">
-          <OlxLogo></OlxLogo>
-        </div>
+        <Link to='/'>
+          <div className="brandName">
+            <OlxLogo></OlxLogo>
+          </div>
+        </Link>
         <div className="placeSearch">
           <Search></Search>
           <input type="text" />
@@ -61,7 +60,7 @@ function Header() {
 
         <div className="loginPage">
           {authUser ? (
-            <span>{authUser}</span>
+            <span>{authUser.displayName}</span>
           ) : (
             <Link to='/login'>
               <span>Login</span>
@@ -75,15 +74,20 @@ function Header() {
         </div>
 
         <div className="sellMenu">
-          <SellButton></SellButton>
-          <div className="sellMenuContent">
-            <SellButtonPlus></SellButtonPlus>
-            <span>SELL</span>
-          </div>
+          <Link to='/create'>
+            <SellButton></SellButton>
+            <div className="sellMenuContent">
+              <SellButtonPlus></SellButtonPlus>
+              <span>SELL</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
   );
+
+
 }
 
 export default Header;
+

@@ -6,15 +6,13 @@ import { auth } from "./config";
 export const listenToAuthChanges = (auth, setAuthUser) => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setAuthUser(user.displayName); // Set the authenticated user
+        setAuthUser(user); // Set the authenticated user
         console.log("User logged in already",user);
-    console.log("current user is ",auth.currentUser.displayName);
-    const aa = auth.currentUser.displayName;
-    return aa;
+    console.log("current user is ",user.uid);
+    
       } else {
         setAuthUser(null); // User is not authenticated
         console.log("User not logged in already");
-        return null
       }
     });
   };

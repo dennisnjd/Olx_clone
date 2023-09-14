@@ -5,13 +5,12 @@ import Banner from '../Components/Banner/Banner';
 
 import Posts from '../Components/Posts/Posts';
 import Footer from '../Components/Footer/Footer';
-import ProfileDetails from '../Components/ProfileDetails/ProfileDetails';
 
-function Home(props) {
+function Home() {
   return (
     <div className="homeParentDiv">
       <Header />
-      <Banner />
+      <Banner />   
       <Posts />
       <Footer />
     </div>

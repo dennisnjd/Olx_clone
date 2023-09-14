@@ -34,11 +34,12 @@
 .card {
   margin-right: 15px;
   padding: 13px;
-  max-width: 222px;
-  width: 222px;
+  max-width: 280px;
+  width: 280px;
   height: 270px;
   display: inline-block;
   cursor: pointer;
+   border: 1px solid rgba(14,4,5,0.2);
 }
 
 .card .favorite {
@@ -64,17 +65,39 @@
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
+  color: #002f34;
 }
-.card .content .kilometer {
+.card .content  {
   font-size: medium;
 }
-.card .content .name {
+.card .content  {
   font-size: small;
 }
-.card .date {
+.name{
+  font-weight: 400;
+  font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    color: rgba(0,47,52,0.64);
+}
+.card .date  {
   display: flex;
   justify-content: flex-end;
   font-size: small;
+}
+.dateText{
+  text-transform: uppercase;
+  color: rgba(0,47,52,0.64);
+    font-size: 10px;
+}
+.kilometer{
+  text-transform: uppercase;
+  color: rgba(0,47,52,0.64);
+    font-size: 11px;
+    justify-content: flex-end;
+
 }
 
 .recommendations {

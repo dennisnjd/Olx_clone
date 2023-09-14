@@ -31,10 +31,6 @@ function Login() {
   }
 
 
-  //firebase function for Logout user
-  const handleSignOut = () => {
-    userSignOut(auth); // Call the function with the Firebase auth object
-  };
 
 
   //checking it the user already loggedin
@@ -80,9 +76,6 @@ function Login() {
         </Link>
       </div>
 
-      <div>
-        <button className='logOutButton' onClick={handleSignOut}>Signout</button>
-      </div>
     </div>
   );
 }

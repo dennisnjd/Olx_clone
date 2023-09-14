@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import './ProfileDetails.css'
 import '../../assets/avatar.png'
+import { Link } from 'react-router-dom';
+
 import { auth } from '../../firebase/config';
 import { listenToAuthChanges, userSignOut } from '../../firebase/AuthDetails';
 
@@ -29,7 +31,14 @@ function ProfileDetails() {
 
         <div className="nameArea">
                 <img className='avatarPic' src="https://statics.olx.in/external/base/img/avatar_1.png" alt="avatar pic" />
-                <h4>{authUser}</h4>
+                <h4>{authUser ? (
+            <h4>{authUser.displayName}</h4>
+          ) : (
+            <>
+              <Link to='/login'><h4>Login</h4></Link>
+              <hr className='line' />
+              </>
+          )}</h4>
         </div>
         <div className="editProfile">
              <button className='editProfileButton' type='button'>View and edit profile</button>
