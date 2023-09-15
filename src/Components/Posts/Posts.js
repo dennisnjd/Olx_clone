@@ -18,21 +18,39 @@ function Posts() {
   let navigate = useNavigate();
 
 
-  useEffect(async () => {
-    const querySnapshot = await getDocs(collection(db, "products"));
+  // useEffect(async () => {
+  //   const querySnapshot = await getDocs(collection(db, "products"));
 
-    const data = [];
-    querySnapshot.forEach((doc) => {
-      data.push({ id: doc.id, ...doc.data() });
-    });
+  //   const data = [];
+  //   querySnapshot.forEach((doc) => {
+  //     data.push({ id: doc.id, ...doc.data() });
+  //   });
 
-    // Now 'data' contains the fetched Firestore data
+  //   // Now 'data' contains the fetched Firestore data
 
-    data ? setProducts(data) : setProducts(['abcd']);
+  //   data ? setProducts(data) : setProducts(['abcd']);
 
-    console.log("data in firestore", data);
+  //   console.log("data in firestore", data);
 
-  }, [])
+  // }, [])
+  useEffect(() => {
+    const querySnapshotPromise = getDocs(collection(db, "products"));
+  
+    querySnapshotPromise
+      .then((querySnapshot) => {
+        const data = [];
+        querySnapshot.forEach((doc) => {
+          data.push({ id: doc.id, ...doc.data() });
+        });
+        // Now 'data' contains the fetched Firestore data
+        setProducts(data);
+        console.log("data in firestore", data);
+      })
+      .catch((error) => {
+        console.error("Error fetching Firestore data:", error);
+        setProducts(['abcd']); // Handle the error by setting a default value
+      });
+  }, []);
 
 
 

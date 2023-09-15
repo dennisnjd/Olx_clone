@@ -17,20 +17,7 @@ export const listenToAuthChanges = (auth, setAuthUser) => {
     });
   };
 
-// export const listenToAuthChanges = (auth, setAuthUser) => {
-//     return new Promise((resolve, reject) => {
-//       onAuthStateChanged(auth, (user) => {
-//         if (user) {
-//           setAuthUser(user.displayName); // Set the authenticated user
-//           console.log("current user is ::",user.displayName);
-//           resolve(user.displayName); // Resolve with the user's name
-//         } else {
-//           setAuthUser(null); // User is not authenticated
-//           resolve(null); // Resolve with null
-//         }
-//       });
-//     });
-//   };
+
 
   export function userSignOut() {
     signOut(auth).then(() => {

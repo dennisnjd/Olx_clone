@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-import './Header.css';
 import OlxLogo from '../../assets/OlxLogo';
 import Search from '../../assets/Search';
 import Arrow from '../../assets/Arrow';
@@ -10,23 +8,22 @@ import { auth } from '../../firebase/config';
 import { listenToAuthChanges } from '../../firebase/AuthDetails';
 import { Link } from 'react-router-dom';
 import ProfileDetails from '../ProfileDetails/ProfileDetails';
+import './Header.css'
 
-
-
-function Header() {
+ function Header() {
 
   const [authUser, setAuthUser] = useState(null);
-  const [isLoaded, setisLoaded] = useState(false)
+  const [isLoaded, setisLoaded] = useState(false);
 
   const toggleProfile = () => {
-    setisLoaded(!isLoaded)
-  }
+    setisLoaded(!isLoaded);
+  };
 
 
   useEffect(() => {
 
     listenToAuthChanges(auth, setAuthUser); // checking if user is logged in and storing name in authUser.
-  }, [])
+  }, []);
 
 
   return (
@@ -46,8 +43,7 @@ function Header() {
           <div className="input">
             <input
               type="text"
-              placeholder="Find car,mobile phone and more..."
-            />
+              placeholder="Find car,mobile phone and more..." />
           </div>
           <div className="searchAction">
             <Search color="#ffffff"></Search>
@@ -88,6 +84,4 @@ function Header() {
 
 
 }
-
 export default Header;
-
