@@ -5,6 +5,8 @@ import SignupPage from "./Pages/Signup";
 import LoginPage from "./Pages/Login"; 
 import CreatePage from "./Pages/Create";
 import ViewPost from "./Pages/ViewPost";
+import MyAddsPage from "./Pages/MyAdds";
+import FavouritesPage from "./Pages/Favourites";
 
 
 
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: '/view',
         element: <ViewPost/>
+      },
+      {
+        path: "/myadds",
+        element: <MyAddsPage/>
+      },
+      {
+        path: "/favourites",
+        element: <FavouritesPage/>
       }
   ]
   );

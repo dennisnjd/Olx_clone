@@ -1,6 +1,9 @@
 .moreView {
-  margin: 16px 16px 24px;
-  padding: 16px 16px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 24px 61px 35px;
+  padding: 16px 47px 32px;
   background-color: #ebeeef;
   border-radius: 4px;
 }
@@ -25,17 +28,17 @@
   display: flex;
 }
 
-.moreView .cards {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
+.cards {
+  display: flexbox;
+  margin-top: 2em;
 }
 
 .card {
   margin-right: 15px;
   padding: 13px;
-  max-width: 280px;
-  width: 280px;
+  width: 20%;
+  margin-left: 40px;
+  margin-bottom: 20px; 
   height: 270px;
   display: inline-block;
   cursor: pointer;
@@ -62,7 +65,7 @@
   text-align: center;
 }
 .card .content .rate {
-  margin-top: 10px;
+  margin-top: 41px;
   font-size: larger;
   font-weight: bold;
   color: #002f34;
@@ -74,7 +77,7 @@
   font-size: small;
 }
 .name{
-  font-weight: 400;
+  font-weight: 450;
   font-size: 16px;
     white-space: nowrap;
     overflow: hidden;

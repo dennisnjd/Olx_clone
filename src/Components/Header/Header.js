@@ -36,7 +36,7 @@ import './Header.css'
         </Link>
         <div className="placeSearch">
           <Search></Search>
-          <input type="text" />
+          <input type="text" placeholder="Search city" />
           <Arrow></Arrow>
         </div>
         <div className="productSearch">

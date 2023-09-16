@@ -25,6 +25,11 @@
   line-height: 32px;
   margin-bottom: 20px;
 }
+.pdtName{
+  font-size: large;
+  font-weight: 600;
+  margin-left: 0%;
+}
 
 .viewParentDiv .rightSection .productDetails {
   border: 1px solid black;
@@ -47,4 +52,25 @@
   color: #002f34;
   font-weight: 400;
   padding: 0;
+}
+
+.addToFavButton {
+  align-items: center;
+  margin-top: 2.5em;
+  width: 90%;
+}
+
+.purchasebtn {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 30px;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  background-color: rgba(248, 177, 60, 1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }

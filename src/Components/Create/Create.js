@@ -34,7 +34,6 @@ const Create = () => {
 
   const productSubmit = (e) => {
     e.preventDefault()
-    console.log("image name",imgLink.name);
 
     authUser 
     ? (async () => {

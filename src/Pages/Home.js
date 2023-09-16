@@ -7,11 +7,12 @@ import Posts from '../Components/Posts/Posts';
 import Footer from '../Components/Footer/Footer';
 
 function Home() {
+
   return (
     <div className="homeParentDiv">
       <Header />
       <Banner />   
-      <Posts />
+      <Posts runEffect={true}/>
       <Footer />
     </div>
   );
