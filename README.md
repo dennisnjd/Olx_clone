@@ -14,57 +14,57 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots of the site :
+1. SignUp page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![signup](https://github.com/dennisnjd/Olx_clone/assets/66307217/099d6a1e-8bfb-4362-b4b5-3ab51877fa61)
 
-### `npm run eject`
+Firebase user authentication is added. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Home page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ![home](https://github.com/dennisnjd/Olx_clone/assets/66307217/400813fa-2379-4136-a356-7e5110b86652)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Adds of products created by all other users will show here as cards with required details of them. Click any products to show full details
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Details of selected Add
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ![view details](https://github.com/dennisnjd/Olx_clone/assets/66307217/ead8ced6-060f-4b06-a046-ea0fd000cf9e)
 
-### Code Splitting
+   From here , the user can add that product to Favourite.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. My favourites Page
 
-### Analyzing the Bundle Size
+   ![favorites](https://github.com/dennisnjd/Olx_clone/assets/66307217/387b62b6-050c-4200-9b17-e18b76ad3a26)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Here the user can see all products they added to  favourite list. Users can remove them from Favourite if needed.
 
-### Making a Progressive Web App
+5. Create an Add
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ![add projects](https://github.com/dennisnjd/Olx_clone/assets/66307217/78638088-e22d-411c-ac15-6a07383213bf)
 
-### Advanced Configuration
+   Here the user can add Image and other details of their product and post add.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+6. My advertaisments Page
 
-### Deployment
+   ![my adds](https://github.com/dennisnjd/Olx_clone/assets/66307217/d26fa8d1-a376-4734-b8df-12519ec07eff)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   Adds posted by the user will list here (You cn see the product added in the previous image listed here) . User can Mark them as Sold from here. The data will remove from the site.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   # Note that  The site is not responsive.
+
+
+
+
+    
+
+
+
+
